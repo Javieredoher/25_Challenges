@@ -1,0 +1,65 @@
+/* Deben dar estilo a los cajones box, sean detallistas revisen, bordes, sombras, usar display flex para que se vea de la misma forma del video.
+
+- Para la ánimación usaremos la propiedad transform con traslateX porque el efecto de las cajas es en sentido horizontal, 
+  revisen cual es el % adecuado para sacarlo de la pantalla (revisar que aplique a cualquier pantalla )
+
+- Recuerden que el efecto contiene una transición (aprox de 0.4s)
+
+- para mostrar la caja en una posición inicial podrán usar .box.show y la misma propiedad con un parámatro inicial */
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  
+  background-color: #efedd6;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background-color: steelblue;
+  color: #fff;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
